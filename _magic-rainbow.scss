@@ -1,0 +1,41 @@
+@each $clr-slang,
+$clr-hash,
+$clr-over in $color-pack {
+	.#{$clr-slang} {
+		&-border,
+		&.ghost {
+			border-color: $clr-hash;
+			background-color: $ghost-base-color;
+			color: $clr-hash;
+		}
+		&.frame {
+			border-color: rgba($clr-hash, .2);
+			border-bottom-color: rgba($clr-hash, .8);
+		}
+		&-txt {
+			color: $clr-hash;
+		}
+		&-bg {
+			background-color: $clr-hash;
+			color: $clr-over;
+		}
+	}
+	//buttons and links
+	a {
+		&.#{$clr-slang} {
+			&.ghost,
+			#neutral-#{$clr-slang}-ghost {
+				color: $clr-hash;
+			}
+			&.ghost:visited {
+				@extend #neutral-#{$clr-slang}-ghost
+			}
+			&.ghost:hover {
+				color: darken($clr-hash, 30);
+			}
+			&.ghost:active {
+				@extend #active-#{$clr-slang}-ghost
+			}
+		}
+	}
+}

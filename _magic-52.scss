@@ -1,0 +1,113 @@
+//Structure
+$gutter: 20px;
+$wide-width: 80%;
+//Breakpoints
+$phablet-bp: 460px;
+$tablet-bp: 520px;
+$notebook-bp: 800px;
+$desktop-bp: 1024px;
+$cinema-bp: 1500px;
+//Typo Colors
+$text-light: #fafafa;
+$text-dark: #262626;
+//Typo Sizes
+$font-p: 1rem;
+$font-q: 1rem;
+$font-q-a: 1rem;
+$font-h: 1rem;
+$font-title: 1rem;
+//Functions
+@function hack-over($color) {
+	@if (lightness($color) > 50) {
+		@return $text-dark // Lighter backgorund, return dark color
+	}
+	@else {
+		@return $text-light; // Darker background, return light color
+	}
+}
+
+@function shade-over($color) {
+	@if (lightness($color) > 50) {
+		@return darken($color, 80) // Lighter backgorund, return dark color
+	}
+	@else {
+		@return lighten($color, 80) // Darker background, return light color
+	}
+}
+
+//Ghost-Color
+$ghost-base-color: transparent;
+//Over Mode
+$hack-or-shade: hack;
+//Rainbow
+$white-color: #fff;
+$white-over: #{$hack-or-shade}-over($white-color);
+$light-color: #fafafa;
+$light-over: #{$hack-or-shade}-over($light-color);
+$ash-color: #DFE2E4;
+$ash-over: #{$hack-or-shade}-over($ash-color);
+$smoke-color: #A4A3A4;
+$smoke-over: #{$hack-or-shade}-over($smoke-color);
+$carbon-color: #3D3C3B;
+$carbon-over: #{$hack-or-shade}-over($carbon-color);
+$dark-color: #262626;
+$dark-over: #{$hack-or-shade}-over($dark-color);
+$black-color: #151515;
+$black-over: #{$hack-or-shade}-over($black-color);
+$pink-color: #F72F76;
+$pink-over: #{$hack-or-shade}-over($pink-color);
+$red-color: #B73625;
+$red-over: #{$hack-or-shade}-over($red-color);
+$orange-color: #ff8800;
+$orange-over: #{$hack-or-shade}-over($orange-color);
+$yellow-color: #FDD045;
+$yellow-over: #{$hack-or-shade}-over($yellow-color);
+$green-color: #A5C84C;
+$green-over: #{$hack-or-shade}-over($green-color);
+$blue-color: #318CEE;
+$blue-over: #{$hack-or-shade}-over($blue-color);
+$purple-color: #624AEF;
+$purple-over: #{$hack-or-shade}-over($purple-color);
+//Brand
+$brand-color: #DD5F61;
+$brand-over: #{$hack-or-shade}-over($brand-color);
+//accent
+$accent-color: #A8B8E8;
+$accent-over: #{$hack-or-shade}-over($accent-color);
+//extra
+$extra-color: #FBDB6C;
+$extra-over: #{$hack-or-shade}-over($extra-color);
+//color-pack
+$color-pack: //(color slang, color code, reading over original),
+(white, $white-color, $white-over),
+(light, $light-color, $light-over),
+(ash, $ash-color, $ash-over),
+(smoke, $smoke-color, $smoke-over),
+(carbon, $carbon-color, $carbon-over),
+(dark, $dark-color, $dark-over),
+(black, $black-color, $black-over),
+(pink, $pink-color, $pink-over),
+(red, $red-color, $red-over),
+(orange, $orange-color, $orange-over),
+(yellow, $yellow-color, $yellow-over),
+(green, $green-color, $green-over),
+(blue, $blue-color, $blue-over),
+(purple, $purple-color, $purple-over),
+(brand, $brand-color, $brand-over),
+(accent, $accent-color, $accent-over),
+(extra, $extra-color, $extra-over);
+//General
+$box-bg-color: #fff;
+$round-corner: 2px;
+$box-round-corner: 2px;
+$base-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
+$box-shadow: $base-shadow;
+//Post-mode
+//typo
+//before and after
+//style names: 
+//	switch(bg white - txt color)
+//	ghost
+//	frame (noticias nex)
+//	overlap 
+//set, on, off
