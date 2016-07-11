@@ -1,4 +1,6 @@
-#grid,
+@import "magic-52";
+
+%grid,
 *[class^="mob-"],
 *[class^="phab-"],
 *[class^="tab-"],
@@ -21,7 +23,7 @@
 }
 
 section {
-	@extend #grid;
+	@extend %grid;
 	justify-content: center;
 	&-l {
 		justify-content: flex-start;
@@ -35,21 +37,21 @@ section {
 }
 
 .wrap {
-	@extend #grid;
+	@extend %grid;
 }
 
 .wide {
-	@extend #grid;
+	@extend %grid;
 }
 
 .col {
-	@extend #grid;
-	padding: ($gutter / 2);
+	@extend %grid;
+	padding: 0 ($gutter / 2);
 	min-height: 1px;
 }
 
 .block {
-	@extend #grid;
+	@extend %grid;
 	padding: 0 ($gutter/2);
 	margin: 0 ($gutter/2);
 	min-height: 1px;
@@ -74,7 +76,6 @@ section {
 
 .mob- {
 	&by1>*,
-	&00,
 	&33,
 	&44,
 	&55,
@@ -339,15 +340,9 @@ section {
 				order: -9;
 			}
 			&2 {
-				order: -8;
-			}
-			&3 {
 				order: -7;
 			}
-			&4 {
-				order: -6;
-			}
-			&5 {
+			&3 {
 				order: -5;
 			}
 		}
@@ -356,15 +351,9 @@ section {
 				order: 9;
 			}
 			&2 {
-				order: 8;
-			}
-			&3 {
 				order: 7;
 			}
-			&4 {
-				order: 6;
-			}
-			&5 {
+			&3 {
 				order: 5;
 			}
 		}
@@ -491,15 +480,9 @@ section {
 				order: -9;
 			}
 			&2 {
-				order: -8;
-			}
-			&3 {
 				order: -7;
 			}
-			&4 {
-				order: -6;
-			}
-			&5 {
+			&3 {
 				order: -5;
 			}
 		}
@@ -508,15 +491,9 @@ section {
 				order: 9;
 			}
 			&2 {
-				order: 8;
-			}
-			&3 {
 				order: 7;
 			}
-			&4 {
-				order: 6;
-			}
-			&5 {
+			&3 {
 				order: 5;
 			}
 		}
@@ -647,15 +624,9 @@ section {
 				order: -9;
 			}
 			&2 {
-				order: -8;
-			}
-			&3 {
 				order: -7;
 			}
-			&4 {
-				order: -6;
-			}
-			&5 {
+			&3 {
 				order: -5;
 			}
 		}
@@ -664,15 +635,9 @@ section {
 				order: 9;
 			}
 			&2 {
-				order: 8;
-			}
-			&3 {
 				order: 7;
 			}
-			&4 {
-				order: 6;
-			}
-			&5 {
+			&3 {
 				order: 5;
 			}
 		}
@@ -811,15 +776,9 @@ section {
 				order: -9;
 			}
 			&2 {
-				order: -8;
-			}
-			&3 {
 				order: -7;
 			}
-			&4 {
-				order: -6;
-			}
-			&5 {
+			&3 {
 				order: -5;
 			}
 		}
@@ -828,15 +787,9 @@ section {
 				order: 9;
 			}
 			&2 {
-				order: 8;
-			}
-			&3 {
 				order: 7;
 			}
-			&4 {
-				order: 6;
-			}
-			&5 {
+			&3 {
 				order: 5;
 			}
 		}
@@ -972,15 +925,9 @@ section {
 				order: -9;
 			}
 			&2 {
-				order: -8;
-			}
-			&3 {
 				order: -7;
 			}
-			&4 {
-				order: -6;
-			}
-			&5 {
+			&3 {
 				order: -5;
 			}
 		}
@@ -989,15 +936,9 @@ section {
 				order: 9;
 			}
 			&2 {
-				order: 8;
-			}
-			&3 {
 				order: 7;
 			}
-			&4 {
-				order: 6;
-			}
-			&5 {
+			&3 {
 				order: 5;
 			}
 		}
